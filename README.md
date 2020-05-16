@@ -5,6 +5,9 @@ This is a React Native app to browse, store and rate recipes of dishes that are 
 
 ## Getting Started
 These instructions will get you to clone and run the project on your local machine for development and testing purposes.
+```
+npm start
+```
 
 ### Prerequisites
 * Node@12
