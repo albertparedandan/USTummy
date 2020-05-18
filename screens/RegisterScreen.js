@@ -1,9 +1,9 @@
-import * as React from 'react';
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { ScrollView } from 'react-native-gesture-handler';
-import StyledButton from "../components/StyledButton";
-import StyledTextInput from "../components/StyledTextInput";
-import Colors from "../constants/Colors";
+import * as React from 'react'
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { ScrollView } from 'react-native-gesture-handler'
+import StyledButton from "../components/StyledButton"
+import StyledTextInput from "../components/StyledTextInput"
+import Colors from "../constants/Colors"
 
 export default class RegisterScreen extends React.Component {
   constructor(props) {

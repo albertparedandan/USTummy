@@ -65,14 +65,13 @@
 //     backgroundColor: '#fff',
 //   },
 // });
-import React from 'react';
+import React from 'react'
 
-//Import react-navigation
-import { createAppContainer } from 'react-navigation';
-import { createStackNavigator} from 'react-navigation-stack';
-import * as Font from 'expo-font';
+// Import react-navigation
+import { createAppContainer } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
 
-import HomeScreen from './screens/HomeScreen';
+import HomeScreen from './screens/HomeScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import LoginScreen from './screens/LoginScreen'
 
@@ -84,23 +83,23 @@ const App = createStackNavigator({
     navigationOptions: {
       title: 'HomeScreen',
       headerStyle: { backgroundColor: Colors.cyan },
-      headerTintColor: Colors.foreground,
-    },
+      headerTintColor: Colors.foreground
+    }
   },
   RegisterScreen: {
     screen: RegisterScreen,
     navigationOptions: {
       title: 'Register',
       headerStyle: { backgroundColor: Colors.red },
-      headerTintColor: Colors.foreground,
-    },
+      headerTintColor: Colors.foreground
+    }
   },
   LoginScreen: {
     screen: LoginScreen,
     navigationOptions: {
-      headerShown: false,
-    },
-  },
-});
+      headerShown: false
+    }
+  }
+})
 
-export default createAppContainer(App);
+export default createAppContainer(App)
