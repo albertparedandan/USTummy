@@ -1,40 +1,51 @@
 import * as React from 'react'
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { ScrollView } from 'react-native-gesture-handler'
 import StyledButton from "../components/StyledButton"
 import StyledTextInput from "../components/StyledTextInput"
 import Colors from "../constants/Colors"
 
 export default class RegisterScreen extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+  render () {
     return (
-      <View style={styles.container}>
-        <ScrollView contentContainerStyle={{flexGrow : 1, justifyContent: 'center', flex : 1, width: '80%', alignSelf: 'center', }} style={{width: '80%'}}>
+      <KeyboardAwareScrollView contentContainerStyle={{ flexGrow: 1, alignItems: 'center' }} style={styles.container}>
+        <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', flex: 1, width: '80%', alignSelf: 'center' } } style={ { width: '100%' } }>
           <View style={styles.scrollContainer}>
-            <StyledTextInput 
-              placeholder="Full Name"
+            <Image
+              source={require('../assets/images/robot-prod.png')}
+              style={styles.profile}
+            />
+            <StyledTextInput
+              placeholder='Full Name'
               style={styles.registerInputText}
             />
-            <StyledTextInput 
-              placeholder="HKUST Email"
+            <StyledTextInput
+              placeholder='HKUST Email'
               style={styles.registerInputText}
             />
-            <StyledTextInput 
-              placeholder="Password"
+            <StyledTextInput
+              placeholder='Password'
               style={styles.registerInputText}
+              secureTextEntry={true}
             />
-            <StyledTextInput 
-              placeholder="Re-enter Password"
+            <StyledTextInput
+              placeholder='Re-enter Password'
               style={styles.registerInputText}
+              secureTextEntry={true}
             />
+            <View style={styles.registerButton}>
+              <StyledButton
+                label='Register'
+              />
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('LoginScreen')}>
+                <Text style={styles.loginText}>Already have an account? Login here</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
-      </View>
-    );
+      </KeyboardAwareScrollView>
+    )
   }
 }
 
@@ -43,15 +54,28 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: Colors.background,
     flexDirection: 'column',
-    alignItems: 'center',
   },
   scrollContainer: {
     flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   registerInputText: {
-    width: "80%",
-    marginTop: 20,
+    width: '80%',
+    marginTop: 50,
     marginBottom: 20,
-    color: Colors.foreground,
+    color: Colors.foreground
   },
-});
+  profile: {
+    marginBottom: 30
+  },
+  registerButton: {
+    marginTop: 40,
+    width: '100%',
+    alignItems: 'center'
+  },
+  loginText: {
+    color: Colors.foreground,
+    marginTop: 15
+  }
+})

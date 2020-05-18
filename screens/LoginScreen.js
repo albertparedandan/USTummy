@@ -17,9 +17,26 @@ export default class LoginScreen extends React.Component {
           <Text style={styles.loginLogoText}>An HKUST Cooking app for your tummy</Text>
         </View>
         <View style={styles.loginFormContainer}>
-          <StyledTextInput placeholder="Email" style={styles.loginInputText} />
-          <StyledTextInput placeholder="Password" style={styles.loginInputText} secureTextEntry={true} />
-          <StyledButton label="LOGiIN" style={styles.loginButton} onPress = {() => this.props.navigation.navigate('LinkScreen')} />
+          <StyledTextInput
+            placeholder="Email"
+            style={styles.loginInputText}
+          />
+          <StyledTextInput
+            placeholder="Password"
+            style={styles.loginInputText}
+            secureTextEntry={true}
+          />
+          <View style={styles.loginButton}>
+            <StyledButton
+              label="LOGiIN"
+              onPress = {() => this.props.navigation.navigate('LinkScreen')}
+            />
+          </View>
+        </View>
+        <View>
+          <TouchableOpacity onPress={() => this.props.navigation.navigate('RegisterScreen')}>
+            <Text style={styles.registerText}>New to USTummy? Register here</Text>
+          </TouchableOpacity>
         </View>
       </View>
     )
@@ -37,7 +54,8 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     alignSelf: 'center',
     alignItems: 'center',
-    justifyContent: 'flex-start'
+    justifyContent: 'center',
+    width: '80%'
   },
   loginFormContainer: {
     flex: 1,
@@ -49,8 +67,7 @@ const styles = StyleSheet.create({
   },
   loginLogo: {
     width: 100,
-    height: 100,
-    marginTop: 50
+    height: 100
   },
   loginLogoText: {
     marginTop: 8,
@@ -66,6 +83,13 @@ const styles = StyleSheet.create({
     color: Colors.foreground
   },
   loginButton: {
-    width: '80%'
+    width: '100%',
+    alignItems: 'center',
+    marginTop: 20
+  },
+  registerText: {
+    color: Colors.foreground,
+    alignSelf: 'center',
+    marginBottom: 20
   }
 })

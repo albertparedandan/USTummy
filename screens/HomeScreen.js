@@ -42,7 +42,7 @@ export default class HomeScreen extends React.Component {
           <StyledButton
             label="LOGIN"
             // onPress={() => this.props.navigation.replace('LoginScreen')}
-            onPress={() => this.props.navigation.navigate('RegisterScreen')}
+            onPress={() => this.props.navigation.navigate('LoginScreen')}
           />
         </ScrollView>
 
