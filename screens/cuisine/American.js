@@ -2,9 +2,9 @@ import * as React from 'react'
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 import { ScrollView } from 'react-native-gesture-handler'
-import StyledButton from "../components/StyledButton"
-import StyledTextInput from "../components/StyledTextInput"
-import Colors from "../constants/Colors"
+import StyledButton from "../../components/StyledButton"
+import StyledTextInput from "../../components/StyledTextInput"
+import Colors from "../../constants/Colors"
 import * as SQLite from 'expo-sqlite'
 
 var db = SQLite.openDatabase({ name: 'UserDatabase.db' })
@@ -73,7 +73,7 @@ export default class RegisterScreen extends React.Component {
         <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', flex: 1, width: '80%', alignSelf: 'center' } } style={ { width: '100%' } }>
           <View style={styles.scrollContainer}>
             <Image
-              source={require('../assets/images/robot-prod.png')}
+              source={require('../../assets/images/robot-prod.png')}
               style={styles.profile}
             />
             <StyledTextInput

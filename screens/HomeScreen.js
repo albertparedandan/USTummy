@@ -23,23 +23,40 @@ export default class HomeScreen extends React.Component {
             <View style={styles.flavourRow}>
               <ScrollView
                 horizontal={true}
+                showsHorizontalScrollIndicator={false}
               >
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('American')}
+                >
+                  <Image
+                    source={require('../assets/images/cuisine/american.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/cuisine/japanese.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/cuisine/chinese.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/cuisine/italian.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/cuisine/indian.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
               </ScrollView>
             </View>
             <StyledText
@@ -49,23 +66,38 @@ export default class HomeScreen extends React.Component {
             <View style={styles.flavourRow}>
               <ScrollView
                 horizontal={true}
+                showsHorizontalScrollIndicator={false}
               >
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/taste/spicy.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/taste/salty.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/taste/soupy.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/taste/savoury.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/taste/sweet.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
               </ScrollView>
             </View>
             <StyledText
@@ -75,23 +107,32 @@ export default class HomeScreen extends React.Component {
             <View style={styles.flavourRow}>
               <ScrollView
                 horizontal={true}
+                showsHorizontalScrollIndicator={false}
               >
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/time/fast.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/time/medium-fast.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/time/medium-slow.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/time/slow.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
               </ScrollView>
             </View>
             <StyledText
@@ -101,19 +142,26 @@ export default class HomeScreen extends React.Component {
             <View style={styles.flavourRow}>
               <ScrollView
                 horizontal={true}
+                showsHorizontalScrollIndicator={false}
               >
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
-                <Image
-                  source={require('../assets/images/robot-prod.png')}
-                  style={styles.cuisine}
-                />
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/price/cheap.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/price/medium.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image
+                    source={require('../assets/images/price/expensive.png')}
+                    style={styles.cuisine}
+                  />
+                </TouchableOpacity>
               </ScrollView>
             </View>
           </View>
@@ -125,37 +173,36 @@ export default class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   outterContainer: {
-    backgroundColor: Colors.background,
-    height: '85%'
+    flex: 1,
+    backgroundColor: Colors.background
   },
   contentContainer: {
     alignItems: 'center'
   },
   flavourContainer: {
     flex: 1,
-    backgroundColor: Colors.cyan,
+    // backgroundColor: Colors.cyan,
     width: '80%'
   },
   flavourRow: {
     flexDirection: 'row',
-    backgroundColor: Colors.red
+    // backgroundColor: Colors.red
   },
   flavours: {
     fontSize: 40,
     color: Colors.pink,
     fontWeight: 'bold',
-    marginTop: 50,
+    marginTop: 90,
     marginBottom: 20,
     marginLeft: '10%',
     alignSelf: 'flex-start'
   },
   cuisineText: {
-    marginLeft: 10,
     marginVertical: 15,
     fontSize: 15,
-    color: Colors.yellow
+    color: Colors.cyan
   },
   cuisine: {
-    marginHorizontal: 10
+    marginRight: 20
   }
 })

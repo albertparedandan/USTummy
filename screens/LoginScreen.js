@@ -1,9 +1,12 @@
 import * as React from 'react'
-import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import StyledButton from "../components/StyledButton"
 import StyledTextInput from "../components/StyledTextInput"
 import Colors from "../constants/Colors"
+import * as SQLite from 'expo-sqlite'
+
+var db = SQLite.openDatabase({ name: 'UserDatabase.db', createFromLocation: 1 })
 
 export default class LoginScreen extends React.Component {
   render () {
@@ -11,7 +14,7 @@ export default class LoginScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.loginLogoContainer}>
           <Image
-            source={require('../assets/images/robot-prod.png')}
+            source={require('../assets/images/logo.png')}
             style={styles.loginLogo}
           />
           <Text style={styles.loginLogoText}>An HKUST Cooking app for your tummy</Text>
@@ -29,8 +32,8 @@ export default class LoginScreen extends React.Component {
           />
           <View style={styles.loginButton}>
             <StyledButton
-              label="LOGiIN"
-              onPress = {() => this.props.navigation.replace('IndexScreen')}
+              label="LOGIN"
+              customClick = {() => this.props.navigation.replace('IndexScreen')}
             />
           </View>
         </View>
@@ -67,11 +70,11 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   loginLogo: {
-    width: 100,
-    height: 100
+    height: 150,
+    resizeMode: 'contain'
   },
   loginLogoText: {
-    marginTop: 8,
+    marginTop: 25,
     marginBottom: 100,
     color: Colors.cyan
   },
