@@ -29,8 +29,8 @@ export default class RegisterScreen extends React.Component {
     const { userPassword2 } = this.state
     // alert(username, userEmail, userPassword, userPassword2)
     if (username) {
-      if (userEmail) {
-      // if (userEmail && userEmail.includes('@') && userEmail.includes('ust.hk')) {
+      // if (userEmail) {
+      if (userEmail && userEmail.includes('@') && userEmail.includes('ust.hk')) {
         if (userPassword && userPassword2 && userPassword === userPassword2) {
           db.transaction(function (tx) {
             tx.executeSql(
