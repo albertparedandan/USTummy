@@ -20,6 +20,7 @@ export default class LoginScreen extends React.Component {
           <StyledTextInput
             placeholder="Email"
             style={styles.loginInputText}
+            autoCapitalize='none'
           />
           <StyledTextInput
             placeholder="Password"

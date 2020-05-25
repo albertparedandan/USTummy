@@ -3,20 +3,12 @@ import { StyleSheet, TouchableOpacity, Text } from 'react-native'
 
 import Colors from '../constants/Colors'
 
-interface Props {
-  label: string;
-  onPress: () => void;
-}
-
-class Button extends React.Component<Props> {
-  render () {
-    const { label, onPress } = this.props
-    return (
-      <TouchableOpacity style={styles.container} onPress={onPress}>
-        <Text style={styles.text}>{label}</Text>
-      </TouchableOpacity>
-    )
-  }
+const StyledButton = props => {
+  return (
+    <TouchableOpacity style={styles.container} onPress={props.customClick}>
+      <Text style={styles.text}>{props.label}</Text>
+    </TouchableOpacity>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -35,4 +27,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default Button
+export default StyledButton
