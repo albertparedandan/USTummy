@@ -74,7 +74,7 @@ export default class RegisterScreen extends React.Component {
         <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: 'center', flex: 1, width: '80%', alignSelf: 'center' } } style={ { width: '100%' } }>
           <View style={styles.scrollContainer}>
             <Image
-              source={require('../assets/images/robot-prod.png')}
+              source={require('../assets/images/logo.png')}
               style={styles.profile}
             />
             <StyledTextInput
@@ -134,7 +134,8 @@ const styles = StyleSheet.create({
     color: Colors.foreground
   },
   profile: {
-    marginBottom: 30
+    height: 150,
+    resizeMode: 'contain'
   },
   registerButton: {
     marginTop: 40,
