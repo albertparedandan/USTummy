@@ -1,3 +1,4 @@
+// # COMP 4521    #  Albert Paredandan        20373300          aparedandan@connect.ust.hk
 import * as React from 'react'
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'

@@ -1,3 +1,4 @@
+// # COMP 4521    #  Albert Paredandan        20373300          aparedandan@connect.ust.hk
 export default {
   background: '#282a36',
   currentLine: '#44475a',

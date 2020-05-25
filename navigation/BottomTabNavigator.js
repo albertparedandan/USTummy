@@ -1,3 +1,4 @@
+// # COMP 4521    #  Albert Paredandan        20373300          aparedandan@connect.ust.hk
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import * as React from 'react';
 

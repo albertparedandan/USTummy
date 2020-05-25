@@ -1,3 +1,4 @@
+// # COMP 4521    #  Albert Paredandan        20373300          aparedandan@connect.ust.hk
 import * as React from 'react'
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'

@@ -1,3 +1,4 @@
+// # COMP 4521    #  Albert Paredandan        20373300          aparedandan@connect.ust.hk
 import * as SQLite from 'expo-sqlite'
 
 const database_name = 'ustTummy.db'
