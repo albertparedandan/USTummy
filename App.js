@@ -71,7 +71,7 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation'
 import { createStackNavigator } from 'react-navigation-stack'
 
-import HomeScreen from './screens/HomeScreen'
+import IndexScreen from './screens/IndexScreen'
 import RegisterScreen from './screens/RegisterScreen'
 import LoginScreen from './screens/LoginScreen'
 
@@ -92,13 +92,10 @@ const App = createStackNavigator({
       headerTintColor: Colors.foreground
     }
   },
-  HomeScreen: {
-    screen: HomeScreen,
+  IndexScreen: {
+    screen: IndexScreen,
     navigationOptions: {
-      title: 'Home',
-      headerStyle: { backgroundColor: Colors.purple },
-      headerTintColor: Colors.foreground,
-      headerShown: true
+      headerShown: false
     }
   }
 })

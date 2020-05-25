@@ -5,6 +5,9 @@ import { ScrollView } from 'react-native-gesture-handler'
 import StyledButton from "../components/StyledButton"
 import StyledTextInput from "../components/StyledTextInput"
 import Colors from "../constants/Colors"
+import { openDatabase } from 'react-native-sqlite-storage'
+
+var db = openDatabase({ name: 'UserDatabase.db' })
 
 export default class RegisterScreen extends React.Component {
   render () {
