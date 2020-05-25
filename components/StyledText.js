@@ -1,6 +1,26 @@
 import * as React from 'react'
-import { Text } from 'react-native'
+import { Text, StyleSheet, TextProps } from 'react-native'
 
-export function MonoText(props) {
-  return <Text {...props} style={[props.style, { fontFamily: 'proxima-nova' }]} />
+import Colors from '../constants/Colors'
+
+type Props = TextProps
+
+export default class StyledText extends React.Component<Props> {
+  render () {
+    const { label, style, ...otherProps } = this.props
+    return (
+      <Text
+        style={[styles.text, style]}
+        {...otherProps}
+      >
+        { label }
+      </Text>
+    )
+  }
 }
+
+const styles = StyleSheet.create({
+  text: {
+    color: Colors.yellow
+  }
+})

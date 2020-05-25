@@ -53,12 +53,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: Colors.background,
-    flexDirection: 'column',
+    flexDirection: 'column'
   },
   scrollContainer: {
     flexDirection: 'column',
     justifyContent: 'center',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   registerInputText: {
     width: '80%',

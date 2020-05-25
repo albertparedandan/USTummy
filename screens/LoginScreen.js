@@ -29,7 +29,7 @@ export default class LoginScreen extends React.Component {
           <View style={styles.loginButton}>
             <StyledButton
               label="LOGiIN"
-              onPress = {() => this.props.navigation.navigate('LinkScreen')}
+              onPress = {() => this.props.navigation.replace('HomeScreen')}
             />
           </View>
         </View>

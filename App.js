@@ -78,26 +78,27 @@ import LoginScreen from './screens/LoginScreen'
 import Colors from './constants/Colors'
 
 const App = createStackNavigator({
-  HomeScreen: {
-    screen: HomeScreen,
+  LoginScreen: {
+    screen: LoginScreen,
     navigationOptions: {
-      title: 'HomeScreen',
-      headerStyle: { backgroundColor: Colors.cyan },
-      headerTintColor: Colors.foreground
+      headerShown: false
     }
   },
   RegisterScreen: {
     screen: RegisterScreen,
     navigationOptions: {
       title: 'Register',
-      headerStyle: { backgroundColor: Colors.red },
+      headerStyle: { backgroundColor: Colors.purple },
       headerTintColor: Colors.foreground
     }
   },
-  LoginScreen: {
-    screen: LoginScreen,
+  HomeScreen: {
+    screen: HomeScreen,
     navigationOptions: {
-      headerShown: false
+      title: 'Home',
+      headerStyle: { backgroundColor: Colors.purple },
+      headerTintColor: Colors.foreground,
+      headerShown: true
     }
   }
 })
