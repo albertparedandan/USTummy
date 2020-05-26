@@ -32,6 +32,9 @@ import Cheap from './cost/Cheap'
 import Medium from './cost/Medium'
 import Expensive from './cost/Expensive'
 
+import Fries from './my_recipes/Fries'
+import Pasta from './my_recipes/Pasta'
+
 const HomeStack = createStackNavigator()
 const HomeStackScreen = () => (
   <HomeStack.Navigator>
@@ -44,6 +47,7 @@ const HomeStackScreen = () => (
 
     <HomeStack.Screen name='Spicy' component={Spicy} />
     <HomeStack.Screen name='Salty' component={Salty} />
+    <HomeStack.Screen name='Fries' component={Fries} />
     <HomeStack.Screen name='Soupy' component={Soupy} />
     <HomeStack.Screen name='Savoury' component={Savoury} />
     <HomeStack.Screen name='Sweet' component={Sweet} />
@@ -58,6 +62,14 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name='Expensive' component={Expensive} />
 
   </HomeStack.Navigator>
+)
+
+const MyRecipeStack = createStackNavigator()
+const MyRecipesStackScreen = () => (
+  <MyRecipeStack.Navigator>
+    <MyRecipeStack.Screen name='My Recipes' component={MyRecipes} />
+    <MyRecipeStack.Screen name='Pasta' component={Pasta} />
+  </MyRecipeStack.Navigator>
 )
 
 const Tab = createBottomTabNavigator()
@@ -87,9 +99,9 @@ function MyTabs () {
         activeTintColor: Colors.red,
         inactiveTintColor: Colors.currentLine,
       }}>
-      <Tab.Screen name="Home" component={HomeStackScreen} />
-      <Tab.Screen name="Add" component={AddRecipe} />
-      <Tab.Screen name="My Recipes" component={MyRecipes} />
+      <Tab.Screen name='Home' component={HomeStackScreen} />
+      <Tab.Screen name='Add' component={AddRecipe} />
+      <Tab.Screen name='My Recipes' component={MyRecipesStackScreen} />
     </Tab.Navigator>
   )
 }

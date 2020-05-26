@@ -18,9 +18,11 @@ export default class HomeScreen extends React.Component {
             <SearchBar
               placeholder='Search my recipe..'
             />
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={() => this.props.navigation.navigate('Pasta')}
+            >
               <StyledText
-                label='Steak'
+                label='Pasta'
                 style={styles.recipeTitle}
               />
             </TouchableOpacity>
