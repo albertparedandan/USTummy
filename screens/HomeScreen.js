@@ -86,25 +86,33 @@ export default class HomeScreen extends React.Component {
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Salty')}
+                >
                   <Image
                     source={require('../assets/images/taste/salty.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Soupy')}
+                >
                   <Image
                     source={require('../assets/images/taste/soupy.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Savoury')}
+                >
                   <Image
                     source={require('../assets/images/taste/savoury.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Sweet')}
+                >
                   <Image
                     source={require('../assets/images/taste/sweet.png')}
                     style={styles.cuisine}
@@ -121,25 +129,33 @@ export default class HomeScreen extends React.Component {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
               >
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Fast')}
+                >
                   <Image
                     source={require('../assets/images/time/fast.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('MediumFast')}
+                >
                   <Image
                     source={require('../assets/images/time/medium-fast.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('MediumSlow')}
+                >
                   <Image
                     source={require('../assets/images/time/medium-slow.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Slow')}
+                >
                   <Image
                     source={require('../assets/images/time/slow.png')}
                     style={styles.cuisine}
@@ -156,19 +172,25 @@ export default class HomeScreen extends React.Component {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
               >
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Cheap')}
+                >
                   <Image
                     source={require('../assets/images/price/cheap.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Medium')}
+                >
                   <Image
                     source={require('../assets/images/price/medium.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Expensive')}
+                >
                   <Image
                     source={require('../assets/images/price/expensive.png')}
                     style={styles.cuisine}

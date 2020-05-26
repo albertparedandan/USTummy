@@ -20,13 +20,13 @@ export default class HomeScreen extends React.Component {
             />
             <TouchableOpacity>
               <StyledText
-                label='Steak'
+                label='French Fries'
                 style={styles.recipeTitle}
               />
             </TouchableOpacity>
             <TouchableOpacity>
               <StyledText
-                label='Yummy Ribs'
+                label='Nachos'
                 style={styles.recipeTitle}
               />
             </TouchableOpacity>
@@ -38,13 +38,13 @@ export default class HomeScreen extends React.Component {
             </TouchableOpacity>
             <TouchableOpacity>
               <StyledText
-                label='Mac and Cheese'
+                label='Popcorn'
                 style={styles.recipeTitle}
               />
             </TouchableOpacity>
             <TouchableOpacity>
               <StyledText
-                label='Hot dogs'
+                label='Fried Chicken'
                 style={styles.recipeTitle}
               />
             </TouchableOpacity>

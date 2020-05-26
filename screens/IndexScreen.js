@@ -23,10 +23,14 @@ import Soupy from './tastes/Soupy'
 import Savoury from './tastes/Savoury'
 import Sweet from './tastes/Sweet'
 
-import fast from './time/10mins'
-import mediumFast from './time/15mins'
-import mediumSlow from './time/20mins'
-import slow from './time/25mins'
+import Fast from './time/10mins'
+import MediumFast from './time/15mins'
+import MediumSlow from './time/20mins'
+import Slow from './time/25mins'
+
+import Cheap from './cost/Cheap'
+import Medium from './cost/Medium'
+import Expensive from './cost/Expensive'
 
 const HomeStack = createStackNavigator()
 const HomeStackScreen = () => (
@@ -39,6 +43,20 @@ const HomeStackScreen = () => (
     <HomeStack.Screen name='Indian' component={Indian} />
 
     <HomeStack.Screen name='Spicy' component={Spicy} />
+    <HomeStack.Screen name='Salty' component={Salty} />
+    <HomeStack.Screen name='Soupy' component={Soupy} />
+    <HomeStack.Screen name='Savoury' component={Savoury} />
+    <HomeStack.Screen name='Sweet' component={Sweet} />
+
+    <HomeStack.Screen name='Fast' component={Fast} />
+    <HomeStack.Screen name='MediumFast' component={MediumFast} />
+    <HomeStack.Screen name='MediumSlow' component={MediumSlow} />
+    <HomeStack.Screen name='Slow' component={Slow} />
+
+    <HomeStack.Screen name='Cheap' component={Cheap} />
+    <HomeStack.Screen name='Medium' component={Medium} />
+    <HomeStack.Screen name='Expensive' component={Expensive} />
+
   </HomeStack.Navigator>
 )
 
