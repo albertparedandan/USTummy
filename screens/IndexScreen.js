@@ -12,8 +12,35 @@ import LoginScreen from './LoginScreen'
 import AddRecipe from './AddRecipe'
 import American from './cuisine/American'
 import MyRecipes from './MyRecipes'
+import Japanese from './cuisine/Japanese'
+import Italian from './cuisine/Italian'
+import Indian from './cuisine/Indian'
+import Chinese from './cuisine/Chinese'
 
-const HomeStack = createStackNavigator();
+import Spicy from './tastes/Spicy'
+import Salty from './tastes/Salty'
+import Soupy from './tastes/Soupy'
+import Savoury from './tastes/Savoury'
+import Sweet from './tastes/Sweet'
+
+import fast from './time/10mins'
+import mediumFast from './time/15mins'
+import mediumSlow from './time/20mins'
+import slow from './time/25mins'
+
+const HomeStack = createStackNavigator()
+const HomeStackScreen = () => (
+  <HomeStack.Navigator>
+    <HomeStack.Screen name='Home' component={HomeScreen} options={{ headerShown: false }}/>
+    <HomeStack.Screen name='American' component={American} />
+    <HomeStack.Screen name='Japanese' component={Japanese} />
+    <HomeStack.Screen name='Chinese' component={Chinese} />
+    <HomeStack.Screen name='Italian' component={Italian} />
+    <HomeStack.Screen name='Indian' component={Indian} />
+
+    <HomeStack.Screen name='Spicy' component={Spicy} />
+  </HomeStack.Navigator>
+)
 
 const Tab = createBottomTabNavigator()
 
@@ -42,7 +69,7 @@ function MyTabs () {
         activeTintColor: Colors.red,
         inactiveTintColor: Colors.currentLine,
       }}>
-      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Add" component={AddRecipe} />
       <Tab.Screen name="My Recipes" component={MyRecipes} />
     </Tab.Navigator>

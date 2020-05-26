@@ -34,25 +34,34 @@ export default class HomeScreen extends React.Component {
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Japanese')}
+                >
                   <Image
                     source={require('../assets/images/cuisine/japanese.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Chinese')}
+                >
                   <Image
                     source={require('../assets/images/cuisine/chinese.png')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Italian')}
+                >
                   <Image
                     source={require('../assets/images/cuisine/italian.png')}
+                    onPress={() => this.props.navigation.navigate('Italian')}
                     style={styles.cuisine}
                   />
                 </TouchableOpacity>
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Indian')}
+                >
                   <Image
                     source={require('../assets/images/cuisine/indian.png')}
                     style={styles.cuisine}
@@ -69,7 +78,9 @@ export default class HomeScreen extends React.Component {
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
               >
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate('Spicy')}
+                >
                   <Image
                     source={require('../assets/images/taste/spicy.png')}
                     style={styles.cuisine}
